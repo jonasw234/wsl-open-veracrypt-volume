@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WSL]
+@="Open WSL here"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WSL\command]
+@="cmd /V:ON /c "cd /d ^"%V^" && echo !cd! > %tmp%\wsl_path.txt" && wsl.exe"
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\WSL]
+@="Open WSL here"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Directory\shell\WSL\command]
+@="cmd /V:ON /c "cd /d ^"%1^" && echo !cd! > %tmp%\wsl_path.txt" && wsl.exe"
+
+
+[HKEY_CLASSES_ROOT\Drive\shell\WSL]
+@="Open WSL here"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Drive\shell\WSL\command]
+@="cmd /V:ON /c "cd /d ^"%1^" && echo !cd! > %tmp%\wsl_path.txt" && wsl.exe"
+
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\WSL]
+@="Open WSL here"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\WSL\command]
+@="cmd /V:ON /c "cd /d ^"%V^" && echo !cd! > %tmp%\wsl_path.txt" && wsl.exe"
