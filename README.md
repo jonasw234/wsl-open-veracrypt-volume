@@ -7,4 +7,8 @@ Next you need to add `source wslpath-veracrypt.zsh` to your .zshrc and it will a
 Since environment variables are different between Windows and WSL, you might need to adjust the paths if your Windows username doesn’t match your WSL username.
 
 ## Limitations
-So far it only seems to work with volumes that have been mounted in VeraCrypt before any WSL shells have been spawned. I’m not sure about why that is, but when I tried to cd into a newly mounted VeraCrypt volume – even manually – after having started WSL before, it didn’t work, so maybe it’s just a limitation of WSL.
+When you start your first WSL shell, all the currently active drives are mounted.  If new drives are added later, you need to manually mount them using
+```
+sudo mkdir /mnt/a
+sudo mount -t drvfs A: /mnt/a
+```
