@@ -5,7 +5,7 @@ my_wslpath() {
     if [ -z $linux_path ]
     then
         # Windows wslpath doesn’t work with VeraCrypt volumes
-        linux_path=/mnt/$((L)1[1]}/${${(C)1[3,9999]//\\/\/}/:/}
+        linux_path=/mnt/${(L)1[1]}/${${(C)1[3,9999]//\\/\/}/:/}
     fi
 }
 wsl_path_textfile=/mnt/c/Users/$USERNAME/AppData/Local/Temp/wsl_path.txt
